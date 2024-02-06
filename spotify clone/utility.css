@@ -1,0 +1,67 @@
+@font-face {
+    font-family: "fac";
+    src: url(fonts/CircularSpotifyText-Bold.otf);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "fac";
+}
+/* .border { */
+    /* border: 2px solid rgb(241, 236, 236); */
+/* } */
+
+.flex {
+    display: flex;
+}
+.justify-content {
+    justify-content: center;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.bg-black {
+    background-color: black;
+    color: white;
+}
+.bg-grey {
+    background-color: #121212;
+}
+.invert {
+    filter: invert(1);
+}
+.rounded {
+    border-radius: 6px;
+}
+.p-1 {
+    padding: 10px;
+}
+
+.m-1 {
+    margin: 3px;
+}
+
+
+    ::-webkit-scrollbar {
+        width: 12px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background-color: #333;
+        border-radius: 6px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background-color: #666;
+    }
+
+
+
+.main {
+    scrollbar-color: #333 #666;
+    scrollbar-width: thin;
+}

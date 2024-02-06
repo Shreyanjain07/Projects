@@ -1,0 +1,315 @@
+@font-face {
+    font-family: "facm";
+    src: url(fonts/CircularSpotifyText-Light.otf)
+}
+:root {
+    --a : 0;
+}
+html,
+body {
+    background-color: black;
+    color: rgb(17, 1, 1);
+    /* height: 100%; */
+    /* overflow: hidden; */
+
+}
+
+.container {
+    width: 100vw;
+}
+
+.left {
+    width: 500px;
+    height: 100%;
+    padding: 4px;
+}
+.close {
+    position: absolute;
+    right: 12px;
+    top: 11px;
+    background-color: #ffffff;
+    display: none;
+}
+.close img {
+    width: 20px;
+}
+.home {
+    margin-bottom: 7px;
+}
+
+.home ul li {
+    display: flex;
+    width: 22px;
+    margin: 17px;
+    gap: 16px;
+    font-size: 14px;
+    align-items: flex-end;
+}
+#hamburger {
+    display: none;
+    cursor: pointer;
+}
+.heading {
+    display: flex;
+    gap: 16px;
+    margin-top: 15px;
+    margin-left: 17px;
+    align-items: center;
+}
+
+.heading img {
+    width: 23px;
+}
+
+.heading .plus {
+    margin-left: 135px;
+    width: 16px;
+}
+
+.libsongs {
+    height: 400px;
+    overflow: auto;
+}
+
+.libsongs ul {
+    list-style-type: decimal;
+    padding: 20px 10px;
+}
+
+.libsongs ul li {
+    display: flex;
+    gap: 24px;
+    cursor: pointer;
+    padding: 5px;
+    border: 2px solid rgba(163, 162, 162, 0.488);
+    border-radius: 6px;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.libsongs .info {
+    width: 150px;
+}
+
+.info .sname {
+    font-size: 14px;
+
+} 
+
+.info .aname {
+    font-size: 14px;
+    font-family: facm;
+    font-weight: 700;
+    color: #d9d7d7;
+}
+
+.pnow {
+    display: flex;
+    font-size: 12px;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.pnow img {
+    width: 30px;
+}
+
+
+
+
+
+.right {
+    width: 100vw;
+    /* height: 100%; */
+    padding: 4px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 9px 16px 6px 22px;
+    height: 54px;
+    /* position: static; */
+}
+
+.main {
+    height: 100vw;
+    width: 100%;
+    position: relative;
+}
+.nav {
+    display: flex;
+    align-items: flex-start;
+}
+.nav img {
+    width: 16px;
+    margin: 18px 14px 0 0;
+
+}
+
+.button {
+    display: flex;
+    gap: 34px;
+}
+
+.subtn {
+    background-color: black;
+    border: none;
+    font-size: 16px;
+    color: #b1b0b0;
+}
+
+.subtn:hover {
+    color: #f5f3f3;
+    font-size: 1.06rem;
+    cursor: pointer;
+}
+
+.lnbtn {
+    padding: 15px 21px;
+    border-radius: 36px;
+    width: 110px;
+    font-size: 16px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.lnbtn:hover {
+    transform: scale(1.06);
+    background-color: #e9e6e6;
+
+}
+
+.songs {
+    padding: 8px 20px;
+    background-color: hsl(0deg 0% 11.76%);
+}
+
+.cardContainer {
+    margin-top: 13px;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-height: 70vh;
+
+}
+
+.card {
+    width: 165px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #1b1a1a;
+    font-family: "facm";
+    position: relative;
+}
+
+.card:hover {
+    background-color: #2b2b2b;
+    cursor: pointer;
+    transition: all .5s;
+    --a : 1;
+}
+
+
+.cardimg img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.card .insideplay {
+    width: 50px;
+    position: absolute;
+    right: 26px;
+    bottom: 100px;
+    opacity: var(--a);
+    transition: all .3s ease-out;
+}
+.card:hover .insideplay {
+    transform: translateY(-8px);
+}
+
+
+.card h2 {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.card p {
+    font-size: 14px;
+    font-weight: 100;
+    color: #a1a1a1;
+    margin-top: 6px;
+}
+
+
+@media (max-width: 1300px) {
+    .card {
+        width: 140px;
+    }
+    .card h2 {
+        font-size: 16px;
+
+    }
+    .card p {
+        font-size: 12px;
+    }
+    .card .insideplay {
+        width: 40px;
+        bottom: 87px;
+    }
+    .left {
+        position: absolute;
+        left: -100%;
+        transition: all .4s;
+        z-index: 1;
+        width: 300px;
+    }
+    .header{
+        width: 88%;
+    }
+
+    .right {
+        width: 100vw;
+    }
+    #hamburger {
+        display: inline;
+        width: 30px;
+        cursor: pointer;
+        margin-top: 11px;
+    }
+    .close {
+        display: block;
+        cursor: pointer;
+    }
+    .cardContainer {
+        max-height: 55vh;
+        overflow-y: auto;
+        justify-content: space-around;
+        gap: 10px;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .card {
+        width: 190px;
+    }
+    .button {
+        gap: 5px;
+    }
+    
+.subtn {
+    font-size: 13px;
+}
+.lnbtn {
+    padding: 5px 1px;
+    width: 80px;
+    font-size: 13px;
+    background-color: white;
+    cursor: pointer;
+    left: 1px ;
+}
+
+}
